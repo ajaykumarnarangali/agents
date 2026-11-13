@@ -1,0 +1,43 @@
+Hospital Management System
+
+The hospital management system provides a centralized platform for managing hospital information, doctors, patients, appointments, departments, and medical services.
+
+Hospital Name: Green Valley Multispeciality Hospital
+Location: Kozhikode, Kerala, India
+Email: contact@greenvalleyhospital.example
+Phone: +91 9876543210
+
+Departments:
+1. Cardiology
+2. Neurology
+3. Orthopedics
+4. Dermatology
+5. Pediatrics
+6. General Medicine
+7. Emergency Medicine
+
+Doctor Information:
+Dr. Arun Kumar
+Specialization: Cardiologist
+Experience: 12 years
+Availability: Monday to Saturday
+
+Patient Management:
+The system allows patients to register, update their profiles, search for doctors, check availability, and book appointments.
+
+Appointment Management:
+Patients can select a doctor, choose an available time slot, confirm appointments, and receive notifications.
+
+Payment Management:
+The platform supports online appointment payments and maintains transaction records.
+
+Notifications:
+Email and real-time notifications are sent when appointments are booked, updated, cancelled, or completed.
+
+Security:
+The application uses JWT authentication, role-based authorization, input validation, and secure API communication.
+
+Database:
+PostgreSQL stores hospital, doctor, patient, appointment, and payment information.
+
+This is dummy content for testing file reading, character limits, and truncation behavior.
