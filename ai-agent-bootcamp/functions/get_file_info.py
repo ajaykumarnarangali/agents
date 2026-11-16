@@ -1,4 +1,5 @@
 import os
+from google.genai import types
 
 
 def get_files_info(working_directory, directory=None):
@@ -34,3 +35,24 @@ def get_files_info(working_directory, directory=None):
         final_response += f"- {content}: file_size={size} bytes, is_dir={is_dir}\n"
 
     return final_response
+
+
+schema_get_files_info = types.FunctionDeclaration(
+    name="get_files_info",
+    description=(
+        "Lists the contents of a directory inside the allowed working directory. "
+        "Returns each item's name, size in bytes, and whether it is a directory."
+    ),
+    parameters=types.Schema(
+        type=types.Type.OBJECT,
+        properties={
+            "directory": types.Schema(
+                type=types.Type.STRING,
+                description=(
+                    "The directory to list, relative to the allowed working directory. "
+                    "Use '.' to list the root working directory."
+                ),
+            ),
+        }
+    ),
+)

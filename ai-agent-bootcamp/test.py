@@ -3,10 +3,11 @@ from functions.get_file_content import get_file_content
 from functions.write_file import write_file
 from functions.run_python_file import run_python_file
 
+
 def main():
     working_dir = "calculator"
 
-    # file info test cases 
+    # file info test cases
     # root_content=get_files_info(working_dir)
     # print("root content:",root_content)
 
@@ -28,7 +29,7 @@ def main():
 
     # directory = get_file_content(working_dir, "pkg")
     # print("Directory test:", directory)
-    
+
     # write funciotn test cases
     # dummy_content = (
     #     "The hospital management system provides a centralized platform for managing hospital"
@@ -45,8 +46,15 @@ def main():
     # )
     # print(success_full_write)
 
-    out_put=run_python_file("calculator","test.py")
-    print(out_put)
+    # run files in sep thread ,instructions
+    run_file_outside = run_python_file("calculator", "../")
+    print(run_file_outside)
+
+    run_nonexistant_file = run_python_file("calculator", "nonexist.py")
+    print(run_nonexistant_file)
+
+    exist_output = run_python_file("calculator", "main.py","3 + 5")
+    print(exist_output)
 
 
 main()
